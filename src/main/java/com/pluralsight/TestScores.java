@@ -14,7 +14,7 @@ public class TestScores {
             int score = scanner.nextInt();
             testScores[i] = score;
         }
-        
+
         System.out.println("Current Scores: ");
         for (int i = 0; i < testScores.length; i++) {
             System.out.println("Score " + (i + 1) + " :" + testScores[i]);
@@ -69,8 +69,11 @@ public class TestScores {
     public static double median(double testScores[]) {
         Arrays.sort(testScores);
 
-        int middle = testScores.length / 2;
+        int middle1 = testScores.length / 2;
+        int middle2 = middle1 + 1;
+        double median = testScores[((middle1 + middle2) / 2)];
 
-        return testScores[middle];
+
+        return median;
     }
 }
