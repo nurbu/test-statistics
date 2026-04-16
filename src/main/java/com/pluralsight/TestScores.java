@@ -5,11 +5,13 @@ public class TestScores {
 
         double testScores[] = {50.2, 100.2, 75, 95, 75, 50, 20, 50, 90, 80};
 
-        System.out.println("Test scores: " + averageScore(testScores));
+        System.out.println("Average Score: " + averageScore(testScores));
+        System.out.println("High score: " + highScore(testScores));
 
     }
 
     // Calculates average
+
     public static double averageScore(double testScores[]) {
 
         double totalScore = 0;
@@ -21,5 +23,17 @@ public class TestScores {
         double average = totalScore / testScores.length;
 
         return average;
+    }
+
+    // Calculates high score
+
+    public static double highScore(double testScores[]) {
+        double highScore = testScores[0];
+        for (int i = 1; i < testScores.length; i++) {
+            if (testScores[i] > highScore) {
+                highScore = testScores[i];
+            }
+        }
+        return highScore;
     }
 }
