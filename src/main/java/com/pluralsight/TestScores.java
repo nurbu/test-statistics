@@ -10,7 +10,7 @@ public class TestScores {
         System.out.printf("Average Score: %.2f\n", averageScore(testScores));
         System.out.println("High score: " + highScore(testScores));
         System.out.println("Low score: " + lowScore(testScores));
-
+        System.out.println("Median score: " + median(testScores));
     }
 
     // Calculates average
