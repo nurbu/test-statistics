@@ -5,8 +5,9 @@ public class TestScores {
 
         double testScores[] = {50.2, 100.2, 75, 95, 75, 50, 20, 50, 90, 80};
 
-        System.out.println("Average Score: " + averageScore(testScores));
+        System.out.printf("Average Score: %.2f\n", averageScore(testScores));
         System.out.println("High score: " + highScore(testScores));
+        System.out.println("Low score: " + lowScore(testScores));
 
     }
 
