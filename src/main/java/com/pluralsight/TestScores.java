@@ -1,13 +1,27 @@
 package com.pluralsight;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class TestScores {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
-        double testScores[] = {50.2, 100.2, 75, 95, 75, 50, 20, 50, 90, 80};
+        double testScores[] = new double[10];
 
-        System.out.printf("Average Score: %.2f\n", averageScore(testScores));
+        System.out.println("Enter the number of test scores: ");
+        for (int i = 0; i < testScores.length; i++) {
+            int score = scanner.nextInt();
+            testScores[i] = score;
+        }
+        
+        System.out.println("Current Scores: ");
+        for (int i = 0; i < testScores.length; i++) {
+            System.out.println("Score " + (i + 1) + " :" + testScores[i]);
+        }
+
+
+        System.out.printf("\nAverage Score: %.2f\n", averageScore(testScores));
         System.out.println("High score: " + highScore(testScores));
         System.out.println("Low score: " + lowScore(testScores));
         System.out.println("Median score: " + median(testScores));
