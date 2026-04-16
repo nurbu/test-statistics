@@ -71,7 +71,9 @@ public class TestScores {
 
         int middle1 = testScores.length / 2;
         int middle2 = middle1 + 1;
-        double median = testScores[((middle1 + middle2) / 2)];
+
+
+        double median = (double) (testScores[middle1] + testScores[middle2]) / 2;
 
 
         return median;
