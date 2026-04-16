@@ -36,4 +36,15 @@ public class TestScores {
         }
         return highScore;
     }
+
+    // calculates lowest score
+    public static double lowScore(double testScores[]) {
+        double lowScore = testScores[0];
+        for (int i = 1; i < testScores.length; i++) {
+            if (testScores[i] < lowScore) {
+                lowScore = testScores[i];
+            }
+        }
+        return lowScore;
+    }
 }
