@@ -1,5 +1,7 @@
 package com.pluralsight;
 
+import java.util.Arrays;
+
 public class TestScores {
     public static void main(String[] args) {
 
@@ -47,5 +49,14 @@ public class TestScores {
             }
         }
         return lowScore;
+    }
+
+    // Calculates the median
+    public static double median(double testScores[]) {
+        Arrays.sort(testScores);
+
+        int middle = testScores.length / 2;
+
+        return testScores[middle];
     }
 }
